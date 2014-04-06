@@ -1,0 +1,35 @@
+<dl>
+<dt>Pages</dt>
+<dd>
+<mt:Pages no_folder="1" sort_by="title" sort_order="ascend">
+<mt:PagesHeader>
+<ul>
+</mt:PagesHeader>
+<li><a href="<$mt:PagePermalink$>" title="<$mt:PageTitle$>"><$mt:PageTitle$></a></li>
+<mt:PagesFooter>
+</ul>
+</mt:PagesFooter>
+</mt:Pages>
+<mt:TopLevelFolders>
+<mt:FolderHeader>
+<ul>
+</mt:FolderHeader>
+<li><b><$mt:FolderLabel$></b>
+<mt:Pages sort_by="title" sort_order="ascend">
+<mt:PagesHeader>
+<ul>
+</mt:PagesHeader>
+<li><a href="<$mt:PagePermalink$>" title="<$mt:PageTitle$>"><$mt:PageTitle$></a></li>
+<mt:PagesFooter>
+</ul>
+</mt:PagesFooter>
+</mt:Pages>
+<$mt:SubFolderRecurse$>
+</li>
+<mt:FolderFooter>
+</ul>
+</mt:FolderFooter>
+</mt:TopLevelFolders>
+</dd>
+</dl>
+

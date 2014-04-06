@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="<$MTPublishCharset$>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard" xml:lang="<$MTBlogLanguage$>" lang="<$MTBlogLanguage$>">
+
+<head>
+
+<$mt:include module="HTMLヘッダー"$>
+<$mt:EntryTrackbackData$>
+<title><$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></title>
+</head>
+
+<body onload="mtEntryOnLoad()">
+
+<$mt:include module="バナーヘッダー"$>
+
+<!-- begin content -->
+<div id="content">
+
+<!-- begin main -->
+<div id="main">
+<div class="inner">
+<p><a href="<$MTBlogURL$>" title="ホーム">ホーム</a>
+&gt;
+<$MTPageTitle$></p>
+
+<h2 id="page-<$mt:PageID$>"><$MTPageTitle$></h2>
+<mt:If tag="PageBody">
+<$mt:PageBody$>
+</mt:If>
+<mt:If tag="PageMore">
+<div id="more">
+<$mt:PageMore$>
+</div>
+</mt:If>
+
+<$mt:Include module="トラックバック"$>
+<$mt:Include module="コメント"$>
+
+</div>
+</div>
+<!-- / main -->
+
+
+<$MTInclude module="サイドバー"$>
+
+</div>
+<!-- /content  -->
+
+
+<$mt:include module="バナーフッター"$>
+
+</body>
+</html>

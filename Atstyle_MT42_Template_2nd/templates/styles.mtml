@@ -1,0 +1,528 @@
+@charset "<$MTPublishCharset$>";
+/************************************************
+*	developer									*
+************************************************/
+/*
+name: mt41_2c1
+designer: @Style
+designer_url: http://atstyle.biz/
+developer: @Style
+developer_url: http://atstyle.biz/
+*/
+/************************************************
+*	Reset										*
+************************************************/
+
+h1,h2,h3,h4,h5,ul,ol,li,dl,dt,dd,blockquote,cite,q,address {
+	font-size: 100%;
+	font-weight: normal;
+	font-style: normal;
+	margin: 0px;
+	padding: 0px;
+}
+
+img {
+border-style: none;
+}
+/************************************************
+*	clear										*
+************************************************/
+div:after {
+    content:".";
+    display: block;
+    height:0px;
+    clear:both;
+    visibility:hidden;
+}
+/************************************************
+*	Layout  									*
+************************************************/
+body {
+		font-family: Arial, Helvetica, Tahoma, "Trebuchet MS", Verdana, "ヒラギノ角ゴ Pro W3", Osaka, "メイリオ", "ＭＳ Ｐゴシック", sans-serif;
+	color: #333333;
+	background-color: #cccccc;
+	text-align: center;
+	margin-top: 0px;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+}
+
+
+
+div#header {
+	color: #333333;
+	background-color: #ffffff;
+	text-align: left;
+	margin-top: 0px;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	width: 740px;
+	overflow: hidden;
+}
+
+
+div#content {
+	font-size: 100%;
+	color: #333333;
+	background-color: #ffffff;
+	text-align: center;
+	margin-top: 0px;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	width: 740px;
+}
+
+
+div#main {
+	font-size: 80%;
+	color: #333333;
+	background-color: #ffffff;
+	text-align: left;
+	margin: 0;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 20px;
+	width: 508px;
+	float: left;
+}
+
+
+div#sub {
+	font-size: 100%;
+	color: #333333;
+	background-color: #ffffff;
+	text-align: left;
+	margin-top: 0px;
+	padding: 0;
+	margin-left: 0px;
+	margin-right: 0;
+	margin-bottom: 20px;
+	width: 230px;
+	float: right;
+}
+
+
+div#footer {
+	font-size: 100%;
+	color: #333333;
+	background-color: #ffffff;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 740px;
+	clear: both;
+}
+
+/************************************************
+*	header  									*
+************************************************/
+
+div#header .inner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+div#header h1 {
+	font-family: Arial, Helvetica, Tahoma, "Trebuchet MS", Verdana,"ヒラギノ角ゴ Pro W3",Osaka,"メイリオ","ＭＳ Ｐゴシック", sans-serif;
+	font-size: 160%;
+	font-weight: bold;
+	margin-top: 20px;
+	padding-top: 0px;
+	margin-left: 0;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+div#header h1 a {
+	text-decoration: none;
+	color: #333333;
+	background-color: #ffffff;
+}
+
+div#header img a {
+	margin: 0px;
+	border: none;
+}
+
+div#header p {
+	font-size: 80%;
+	color: #333333;
+	background-color: #ffffff;
+	line-height: 140%;
+	margin-top: 5px;
+	padding-top: 0px;
+	margin-left: 0;
+	margin-bottom: 5px;
+	padding-bottom: 0px;
+}
+
+
+/************************************************
+*	Content 					     		    * 
+************************************************/
+
+div#main .inner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* 見出し */
+div#main h2 {
+	font-family: Arial, Helvetica, Tahoma, "Trebuchet MS", Verdana,"ヒラギノ角ゴ Pro W3",Osaka,"メイリオ","ＭＳ Ｐゴシック", sans-serif;
+	font-size: 130%;
+	font-weight: bold;
+	color: #333333;
+	background-color: #ffffff;
+	margin-top: 15px;
+	padding-top: 5px;
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-right: 0px;
+	padding-right: 0px;
+	margin-bottom: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #333333;
+	padding-bottom: 3px;
+	clear: both;
+}
+
+div#main h3 {
+	font-family: Arial, Helvetica, Tahoma, "Trebuchet MS", Verdana,"ヒラギノ角ゴ Pro W3",Osaka,"メイリオ","ＭＳ Ｐゴシック", sans-serif;
+	font-size: 120%;
+	font-weight: bold;
+	color: #333333;
+	background-color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #333333;
+	clear: both;
+}
+/* ハイパーリンク */
+div#main a {
+	text-decoration: none;
+	color: #006699;
+	background-color: #ffffff;
+}
+
+div#main a:hover {
+	text-decoration: underline;
+	color: #006699;
+	background-color: #ffffff;
+}
+/* 段落 */
+div#main p {
+	line-height: 20px;
+	margin: 0px;
+	padding-top: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+}
+.menu {
+	padding-top: 20px;
+}
+
+/* 画像 */
+div#main img {
+	border: none;
+	margin-bottom: 10px;
+}
+/* リスト */
+div#main ol,div#main ul {
+	margin-top: 0;
+	margin-left: 25px;
+	margin-right: 0;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+div#main ol li,div#main ul li {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+/* 引用 */
+div#main blockquote {
+	color: #333333;
+	background-color: #eeeeee;
+	line-height: 140%;
+	margin-top: 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #999999;
+	padding-top: 3px;
+	margin-left: 0;
+	padding-left: 10px;
+	margin-right: 0;
+	padding-right: 10px;
+	margin-bottom: 5px;
+	padding-bottom: 3px;
+}
+
+div#main blockquote p {
+	padding-top: 3px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 3px;
+}
+
+/* 引用元情報 */
+div#main cite {
+	font-style: italic;
+}
+
+/* 整形済みテキスト */
+div#main pre {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #CCCCCC;
+	padding: 5px;
+	overflow: scroll;
+}
+/* 箇条書き（定義リスト） */
+div#main dl {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+div#main dt {
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 0;
+	padding-bottom: 10px;
+}
+
+div#main dd {
+	padding-left: 5px;
+}
+
+/* 画像左配置 */
+img.mt-image-left {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+/* 画像中央配置 */
+img.mt-image-center {
+    display: block;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+/* 画像右配置 */
+img.mt-image-right {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+/* 続き */
+div#main .extended {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: auto;
+	float: right;
+	display: block;
+}
+
+/* タグ */
+div#main .entry-tags {
+	margin: 0 0 10px 0;
+	clear: both;
+}
+div#main .entry-tags-header,
+div#main .entry-tags-list {
+	display: inline;
+}
+
+div#main h3.entry-tags-header {
+	font-weight: normal !important;
+	border-style: none !important;
+}
+
+div#main li.entry-tag { 
+	margin-right: 5px;
+	display: inline;
+}
+div#main ul.entry-tags-list {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+div#main .posted img {
+	border: none;
+	margin-bottom: -5px;
+}
+
+div.comment-reply {
+	margin-left: 20px;
+}
+
+
+/* コメンター画像 */
+.asset-meta img {
+	position: relative;
+	top: 14px;
+}
+
+/* コメントフォーム */
+div#main textarea{
+	width: 440px;
+}
+/* コメントフォーム文字サイズ */
+div#main input,div#main textarea {
+	font-size: 100%;
+}
+div#main label {
+	margin-bottom: 0.8em;
+	width: 11em;
+	float: left;
+	clear: both;
+	white-space: nowrap;
+}
+
+
+
+/************************************************
+*	 Sidebar 					     	    * 
+************************************************/
+
+div#sub .inner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* サイドバーリスト */
+div#sub dl {
+	clear:both;
+}
+
+div#sub dt {
+	font-family: Arial, Helvetica, Tahoma, "Trebuchet MS", Verdana,"ヒラギノ角ゴ Pro W3",Osaka,"メイリオ","ＭＳ Ｐゴシック", sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	color: #333333;
+	background-color: #ffffff;
+	margin-top: 20px;
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 4px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #333333;
+}
+
+div#sub dd {
+	font-size: 100%;
+}
+	
+	
+div#sub ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	}
+
+div#sub ul li {
+	font-size: 75%;
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 3px;
+}
+
+div#sub ul li li {
+	font-size: 100%;
+	margin-left: 20px;
+		
+}
+	
+div#sub ul li a {
+	text-decoration: none;
+	color: #006699;
+	background-color: #ffffff;
+	margin: 0;
+}
+
+div#sub ul li a:hover{
+	text-decoration: underline;
+	color: #006699;
+	background-color: #ffffff;
+}
+/* サイドバー段落 */
+div#sub p{
+	line-height: 20px;
+	margin: 0;
+	padding-top: 3px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+/* サイドバータグクラウド */
+div#sub .module-tagcloud .module-content
+	{text-align: left; }
+
+div#sub .module-tagcloud .module-content .module-list
+	{ list-style: none; }
+
+div#sub .module-tagcloud .module-content .module-list .module-list-item
+	{ display: inline; }
+
+div#sub .module-tagcloud .module-content .module-list li.taglevel1
+	{ font-size: 170%; }
+
+div#sub .module-tagcloud .module-content .module-list li.taglevel2
+ 	{ font-size: 150%; }
+
+div#sub .module-tagcloud .module-content .module-list li.taglevel3
+	{ font-size: 130%; }
+	
+div#sub .module-tagcloud .module-content .module-list li.taglevel4
+	{ font-size: 110%; }
+	
+div#sub .module-tagcloud .module-content .module-list li.taglevel5
+	{ font-size: 90%; }
+	
+div#sub .module-tagcloud .module-content .module-list li.taglevel6
+	{ font-size: 70%; }
+
+
+div#sub li.item {
+	display: inline;
+	float: left;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+	width: 70px;
+	height: 70px;
+}
+
+/************************************************
+*	Footer  									*
+************************************************/
+/* 文責 */
+div#footer address {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-family: Arial, Helvetica, Tahoma, "Trebuchet MS", Verdana,"ヒラギノ角ゴ Pro W3",Osaka,"メイリオ","ＭＳ Ｐゴシック", sans-serif;
+	font-size: 70%;
+	font-weight: bold;
+}
+/* 段落 */
+div#footer p {
+	font-size: 70%;
+}

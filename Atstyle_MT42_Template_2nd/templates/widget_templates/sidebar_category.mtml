@@ -1,0 +1,20 @@
+<dl>
+<dt>Categories</dt>
+<dd>
+<mt:TopLevelCategories>
+<mt:SubCatIsFirst>
+<ul>
+</mt:SubCatIsFirst>
+<mt:IfNonZero tag="mt:CategoryCount">
+<li><a href="<$mt:CategoryArchiveLink$>"<mt:IfNonEmpty tag="mt:CategoryDescription"> title="<$mt:CategoryDescription$>"</mt:IfNonEmpty>><$mt:CategoryLabel$> (<$mt:CategoryCount$>)</a>
+<mt:Else>
+<li><$mt:CategoryLabel$>
+</mt:IfNonZero>
+<$mt:SubCatsRecurse$>
+</li>
+<mt:SubCatIsLast>
+</ul>
+</mt:SubCatIsLast>
+</mt:TopLevelCategories>
+</dd>
+</dl>

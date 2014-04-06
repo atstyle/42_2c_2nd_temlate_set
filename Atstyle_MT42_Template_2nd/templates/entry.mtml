@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="<$MTPublishCharset$>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard" xml:lang="<$MTBlogLanguage$>" lang="<$MTBlogLanguage$>">
+<head>
+<$mt:include module="HTMLヘッダー"$>
+<MTEntryPrevious><link rel="prev" href="<$MTEntryPermalink$>" title="<$MTEntryTitle encode_html="1"$>" /></MTEntryPrevious>
+<MTEntryNext><link rel="next" href="<$MTEntryPermalink$>" title="<$MTEntryTitle encode_html="1"$>" /></MTEntryNext>
+<$MTEntryTrackbackData$>
+<title><$MTEntryTitle encode_html="1"$> - <$MTBlogName encode_html="1"$></title>
+</head>
+
+<body onload="mtEntryOnLoad()">
+
+<$mt:include module="バナーヘッダー"$>
+
+
+<!-- begin content -->
+<div id="content">
+
+<!-- begin main -->
+<div id="main">
+<div class="inner">
+
+<p><a href="<$MTBlogURL$>" title="ホーム">ホーム</a>
+&gt;
+<MTEntryCategories glue=", ">
+<a href="<$MTCategoryArchiveLink$>"><MTCategoryLabel></a>
+</MTEntryCategories>
+&gt;
+<$MTEntryTitle$>
+</p>
+
+<h2 id="entry-<$MTEntryID$>"><$MTEntryTitle$></h2>
+<p class="posted">
+
+<abbr title="<$MTEntryDate format="%Y年%m月%d日 %k時%M分"$>"><$MTEntryDate format="%x"$></abbr> <MTIfNonEmpty tag="EntryAuthorDisplayName"><$MTEntryAuthorLink show_email="0"$></MTIfNonEmpty>
+
+<MTUnless name="hide_counts" eq="1">
+<MTIfCommentsActive>| <a href="<$MTEntryPermalink$>#comments" title="Comments for <$MTEntryTitle$>"><$MTEntryCommentCount singular="コメント(1)" plural="コメント(#)"$></a></MTIfCommentsActive>
+<MTIfPingsActive>| <a href="<$MTEntryPermalink$>#trackbacks" title="Trackback for <$MTEntryTitle$>"><$MTEntryTrackbackCount singular="トラックバック(1)" plural="トラックバック(#)"$></a></MTIfPingsActive>
+</MTUnless>
+</p>
+<MTIfNonEmpty tag="EntryBody">
+<$MTEntryBody$>
+</MTIfNonEmpty>
+<MTIfNonEmpty tag="EntryMore" convert_breaks="0">
+<div id="more">
+<$MTEntryMore$>
+</div>
+</MTIfNonEmpty>
+
+<MTEntryIfTagged>
+<div class="entry-tags">
+<h3 class="entry-tags-header">タグ:</h3> 
+<ul class="entry-tags-list">
+<MTEntryTags>
+<li class="entry-tag"><a href="<$MTTagSearchLink$>" rel="tag" title="タグ：<$MTTagName>の一覧"><$MTTagName></a></li>
+</MTEntryTags>
+</ul>
+</div>
+</MTEntryIfTagged>
+
+<$MTInclude module="トラックバック"$>
+<$MTInclude module="コメント"$>
+
+</div>
+</div>
+<!-- / main -->
+
+
+<$MTInclude module="サイドバー"$>
+
+</div>
+<!-- /content  -->
+
+
+<$mt:include module="バナーフッター"$>
+
+</body>
+</html>

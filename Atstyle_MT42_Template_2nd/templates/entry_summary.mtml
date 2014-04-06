@@ -1,0 +1,34 @@
+<$MTEntryTrackbackData$>
+
+<h2><$MTEntryTitle$></h2>
+
+<p class="posted">
+
+<abbr title="<$MTEntryDate format="%x %k時%M分"$>"><$MTEntryDate format="%x"$></abbr> <MTIfNonEmpty tag="EntryAuthorDisplayName"><$MTEntryAuthorLink show_email="0"$></MTIfNonEmpty>
+
+<MTUnless name="hide_counts" eq="1">
+| <a class="permalink" href="<$MTEntryPermalink$>" title="Permalink to this entry:<$MTEntryTitle$>">個別ページ</a>
+<MTIfCommentsActive>| <a href="<$MTEntryPermalink$>#comments" title="Comments for <$MTEntryTitle$>"><$MTEntryCommentCount singular="コメント(1)" plural="コメント(#)"$></a></MTIfCommentsActive>
+<MTIfPingsActive>| <a href="<$MTEntryPermalink$>#trackbacks" title="Trackback for <$MTEntryTitle$>"><$MTEntryTrackbackCount singular="トラックバック(1)" plural="トラックバック(#)"$></a></MTIfPingsActive>
+</MTUnless>
+</p>
+
+
+<MTIfNonEmpty tag="EntryBody">
+<$MTEntryBody$>
+</MTIfNonEmpty>
+
+<MTEntryIfTagged>
+<div class="entry-tags">
+<h3 class="entry-tags-header">タグ:</h3> 
+<ul class="entry-tags-list">
+<MTEntryTags>
+<li class="entry-tag"><a href="<$MTTagSearchLink$>" rel="tag" title="タグ：<$MTTagName>の一覧"><$MTTagName></a></li>
+</MTEntryTags>
+</ul>
+</div>
+</MTEntryIfTagged>
+
+<MTIfNonEmpty tag="EntryMore" convert_breaks="0">
+<p class="extended">続きを読む: <a href="<$MTEntryPermalink$>#more" rel="bookmark" title="「<$MTEntryTitle$>」の続きを読む"><$MTEntryTitle$></a></p>
+</MTIfNonEmpty>

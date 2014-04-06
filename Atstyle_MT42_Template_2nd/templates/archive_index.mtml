@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="<$MTPublishCharset$>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard" xml:lang="<$MTBlogLanguage$>" lang="<$MTBlogLanguage$>">
+
+<head>
+<$mt:include module="HTMLヘッダー"$>
+<title><$MTBlogName encode_html="1"$>: アーカイブ</title>
+</head>
+
+<body>
+
+<$mt:include module="バナーヘッダー"$>
+
+
+<!-- begin content -->
+<div id="content">
+
+<!-- begin main -->
+<div id="main">
+<div class="inner">
+
+<h2><$MTBlogName encode_html="1"$>: アーカイブ</h2>
+
+<mt:ignore>
+<!-- List of monthly archives, if monthly archives are enabled -->
+</mt:ignore>
+<MTIfArchiveTypeEnabled archive_type="Monthly">
+<MTArchiveList archive_type="Monthly">
+<MTArchiveListHeader>
+<h3>月別アーカイブ</h3>
+<ul>
+</MTArchiveListHeader>
+<li><a href="<$MTArchiveLink$>"><$MTArchiveTitle$></a></li>
+<MTArchiveListFooter>
+</ul>
+</MTArchiveListFooter>
+</MTArchiveList>
+
+</MTIfArchiveTypeEnabled>
+
+
+<mt:ignore>
+<!-- List of category archives, if category archives are enabled -->
+</mt:ignore>
+<MTIfArchiveTypeEnabled archive_type="Category">
+<h3>カテゴリ</h3>
+
+<MTTopLevelCategories>
+<MTSubCatIsFirst>
+<ul>
+</MTSubCatIsFirst>
+<MTIfNonZero tag="MTCategoryCount">
+<li><a href="<$MTCategoryArchiveLink$>" title="<$MTCategoryDescription$>"><$MTCategoryLabel$></a>
+<MTElse>
+<li><$MTCategoryLabel$>
+</MTIfNonZero>
+<MTSubCatsRecurse>
+</li>
+<MTSubCatIsLast>
+</ul>
+</MTSubCatIsLast>
+</MTTopLevelCategories>
+
+</MTIfArchiveTypeEnabled>
+
+
+<mt:ignore>
+<!-- List of author archives, if category author are enabled -->
+<MTIfArchiveTypeEnabled archive_type="Author">
+
+<MTArchiveList archive_type="Author">
+<MTArchiveListHeader>
+<h3">ユーザーアーカイブ</h3>
+<ul">
+</MTArchiveListHeader>
+<li><a href="<$MTArchiveLink$>"><$MTArchiveTitle$></a></li>
+<MTArchiveListFooter>
+</ul>
+
+</MTArchiveListFooter>
+</MTArchiveList>
+
+</MTIfArchiveTypeEnabled>
+</mt:ignore>
+
+
+<mt:ignore>
+    <!-- List of category archives by month, if category archives are enabled -->
+    <MTIfArchiveTypeEnabled archive_type="Category-Monthly">
+                                <div class="archive-category-monthly archive">
+        <MTArchiveList archive_type="Category-Monthly">
+            <MTArchiveListHeader>
+                                    <h2 class="archive-header">月別カテゴリアーカイブ</h2>
+                                    <div class="archive-content">
+                                        <ul class="archive-list">
+            </MTArchiveListHeader>
+                                            <li class="archive-list-item"><a href="<$MTArchiveLink$>"><$MTArchiveTitle$></a></li>
+            <MTArchiveListFooter>
+                                        </ul>
+                                    </div>
+            </MTArchiveListFooter>
+        </MTArchiveList>
+                                </div>
+    </MTIfArchiveTypeEnabled>
+</mt:ignore>
+
+
+<mt:ignore>
+    <!-- List of author archives, if category archives are enabled -->
+    <MTIfArchiveTypeEnabled archive_type="Author-Monthly">
+                                <div class="archive-author-monthly archive">
+        <MTArchiveList archive_type="Author-Monthly">
+            <MTArchiveListHeader>
+                                    <h2 class="archive-header">月別ユーザーアーカイブ</h2>
+                                    <div class="archive-content">
+                                        <ul class="archive-list">
+            </MTArchiveListHeader>
+                                            <li class="archive-list-item"><a href="<$MTArchiveLink$>"><$MTArchiveTitle$></a></li>
+            <MTArchiveListFooter>
+                                        </ul>
+                                    </div>
+            </MTArchiveListFooter>
+        </MTArchiveList>
+                                </div>
+    </MTIfArchiveTypeEnabled>
+</mt:ignore>
+
+
+<mt:ignore>
+    <!-- List of entry archives, if entry archives are enabled -->
+<MTIfArchiveTypeEnabled archive_type="Individual">
+                            <div class="archive-individual archive-date-based archive">
+    <MTArchiveList archive_type="Individual">
+        <MTArchiveListHeader>
+                                <div class="archive-content">
+                                    <ul class="archive-list">
+        </MTArchiveListHeader>
+                                        <li class="archive-list-item"><$MTArchiveDate format="%Y.%m.%d"$>: <a href="<$MTArchiveLink$>"><$MTArchiveTitle$></a></li>
+        <MTArchiveListFooter>
+                                    </ul>
+                                </div>
+        </MTArchiveListFooter>
+    </MTArchiveList>
+                            </div>
+</MTIfArchiveTypeEnabled>
+</mt:ignore>
+
+</div>
+</div>
+<!-- / main -->
+
+
+<$MTInclude module="サイドバー"$>
+
+</div>
+<!-- /content  -->
+
+
+<$mt:include module="バナーフッター"$>
+
+</body>
+</html>

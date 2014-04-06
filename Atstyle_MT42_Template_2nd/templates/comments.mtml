@@ -1,0 +1,127 @@
+<mt:Ignore>
+<!-- Display comments for the entry/page or commenting form if entry/page is accepting comments -->
+</mt:Ignore>
+<mt:IfCommentsActive>
+<div id="comments" class="comments">
+
+
+<mt:Ignore>
+<!-- Display comments -->
+</mt:Ignore>
+<mt:Comments>
+<mt:CommentsHeader>
+<h2 class="comments-header"><$mt:EntryCommentCount singular="コメント(1)" plural="コメント(#)" none="コメント(0)"$></h2>
+<div class="comments-content">
+</mt:CommentsHeader>
+<div id="comment-<$mt:CommentID$>" class="comment<mt:IfCommentParent> comment-reply</mt:IfCommentParent>">
+
+<div class="comment-header">
+<div class="asset-meta">
+<span class="byline">
+<$mt:CommentAuthorIdentity$>
+<mt:IfCommentParent>
+<span class="vcard author"><$mt:CommentAuthorLink$></span>から<a href="<mt:CommentParent><$mt:CommentLink$></mt:CommentParent>"><mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent></a>への返信
+<mt:Else>
+<span class="vcard author"><$mt:CommentAuthorLink$></span>
+</mt:IfCommentParent>
+| <a href="<$mt:CommentLink$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></abbr></a>
+<mt:IfCommentsAccepted>
+| <$mt:CommentReplyToLink$>
+</mt:IfCommentsAccepted>
+</span>
+</div>
+</div>
+
+<div class="comment-content">
+<$mt:CommentBody$>
+</div>
+            
+</div>
+<mt:CommentsFooter>
+    </div>
+</mt:CommentsFooter>
+</mt:Comments>
+
+
+<mt:Ignore>
+<!-- Display commenting form if entry/page is accepting comments -->
+</mt:Ignore>
+<mt:IfCommentsAccepted>
+<div class="comments-open" id="comments-open">
+<h3 class="comments-open-header">コメントする</h3>
+<div class="comments-open-content">
+
+<mt:Ignore>
+<!-- Display greeting for users if blog allows users to register locally -->
+</mt:Ignore>
+
+<div id="comment-greeting"></div>
+
+<form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+<input type="hidden" name="static" value="1" />
+<input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
+<input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
+<input type="hidden" name="parent_id" value="<$mt:CommentParentID$>" id="comment-parent-id" />
+<input type="hidden" name="armor" value="1" />
+<input type="hidden" name="preview" value="" />
+<input type="hidden" name="sid" value="" />
+
+<div id="comments-open-data">
+
+<div id="comment-form-name">
+<label for="comment-author">名前</label>
+<input id="comment-author" name="author" size="30" tabindex="1" accesskey="n" value="" onfocus="mtCommentFormOnFocus()" />
+</div>
+
+<div id="comment-form-email">
+<label for="comment-email">電子メール</label>
+<input id="comment-email" name="email" size="30" tabindex="2" accesskey="m" value="" onfocus="mtCommentFormOnFocus()" />
+</div>
+
+<div id="comment-form-url">
+<label for="comment-url">URL</label>
+<input id="comment-url" name="url" size="30" tabindex="3" accesskey="u" value="" onfocus="mtCommentFormOnFocus()" />
+</div>
+
+<div id="comment-form-remember-me">
+<input type="checkbox" id="comment-bake-cookie" name="bakecookie" onclick="mtRememberMeOnClick(this)" onkeypress="mtRememberMeOnClick(this)" value="1" tabindex="4" accesskey="r" />
+<label for="comment-bake-cookie">ログイン情報を記憶</label>
+</div>
+
+</div>
+
+<div id="comment-form-reply" style="display:none">
+<input type="checkbox" id="comment-reply" name="comment_reply" value="" onclick="mtSetCommentParentID()" onkeypress="mtSetCommentParentID()" tabindex="5" accesskey="c" />
+<label for="comment-reply" id="comment-reply-label"></label>
+</div>
+
+<div id="comments-open-text">
+<label for="comment-text">コメント
+<mt:IfAllowCommentHTML>(スタイル用のHTMLタグを使えます)</mt:IfAllowCommentHTML></label>
+<textarea id="comment-text" name="text" rows="15" cols="50" onfocus="mtCommentFormOnFocus()" tabindex="6" accesskey="t">Leave your comment here.</textarea>
+</div>
+
+<div id="comments-open-captcha"></div>
+
+<div id="comments-open-footer">
+<input type="submit" name="preview_button" id="comment-preview" value="確認" onclick="this.form.preview.value='1';" onkeypress="this.form.preview.value='1';" tabindex="76" accesskey="v" />
+<input type="submit" name="post" id="comment-submit" value="投稿" tabindex="8" accesskey="s" />
+</div>
+
+</form>
+
+
+</div>
+</div>
+
+    <script type="text/javascript">
+    <!--
+    mtAttachEvent("load", mtEntryOnLoad);
+    mtAttachEvent("unload", mtEntryOnUnload);
+    //-->
+    </script>
+    </mt:IfCommentsAccepted>
+
+
+</div>
+</mt:IfCommentsActive>

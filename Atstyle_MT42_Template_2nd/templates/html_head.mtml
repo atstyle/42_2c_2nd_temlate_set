@@ -1,0 +1,21 @@
+<meta http-equiv="Content-Type" content="text/html; charset=<$MTPublishCharset$>" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="generator" content="<$MTProductName version="1"$>" />
+<MTIf name="entry_template"><meta name="description" content="<$MTEntryExcerpt remove_html="1"$>" /><MTElse><MTIf name="category_archive"><meta name="description" content="<$MTArchiveTitle$> <$MTCategoryDescription$>" /><MTElse><MTIf name="page_template"><meta name="description" content="<$MTPageTitle$> <$MTPageExcerpt remove_html="1"$>" /><MTElse><MTIf name="main_index"><meta name="description" content="<$MTBlogDescription$>" /><MTElse><meta name="description" content="<$mt:var name="title"$>" /></MTIf></MTIf></MTIf></MTIf>
+<meta name="keywords" content="キーワード1,キーワード2,キーワード3<MTEntryIfTagged>,<MTEntryTags glue=","><$MTTagName$></MTEntryTags></MTEntryIfTagged><MTIfNonZero tag="MTEntryKeywords">,<$MTEntryKeywords$></MTIfNonZero>" />
+<link rel="stylesheet" href="<$MTLink template="styles"$>" type="text/css" />
+<MTUnless name="main_index">
+<link rel="start" href="<$MTBlogURL$>" title="Home" />
+</MTUnless>
+<MTUnless name="archive_index">
+<link rel="contents" href="<$MTLink template="アーカイブインデックス"$>" title="archives" />
+</MTUnless>
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="<$MTLink template="feed_recent"$>" />
+<MTBlogIfCCLicense>
+<link rel="schema.CC" href="http://web.resource.org/cc/" />
+<meta name="CC.license" content="<$MTBlogCCLicenseURL$>" />
+</MTBlogIfCCLicense>
+<link rev="made" href="mailto:mail@yourdomain.com" />
+
+<script type="text/javascript" src="<$MTLink template="javascript"$>"></script>

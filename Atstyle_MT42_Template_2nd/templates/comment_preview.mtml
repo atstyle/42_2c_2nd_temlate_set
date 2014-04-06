@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="<$MTPublishCharset$>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard" xml:lang="<$MTBlogLanguage$>" lang="<$MTBlogLanguage$>">
+<head>
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var user = <$mt:UserSessionState$>;
+    var is_preview = true;
+    /* ]]> */
+    </script>
+    <$mt:Include module="HTMLヘッダー"$>
+    <title><$mt:BlogName encode_html="1"$>: コメントの確認</title>
+</head>
+<body id="<$mt:BlogTemplateSetID$>" class="mt-comment-preview <$mt:Var name="page_layout"$>" onload="mtEntryOnLoad()" onunload="mtEntryOnUnload()">
+
+<$mt:Include module="バナーヘッダー"$>
+<!-- begin content -->
+<div id="content">
+
+<!-- begin main -->
+<div id="main">
+<div class="inner">
+
+<p><a href="<$MTBlogURL$>" title="ホーム">ホーム</a>
+&gt;
+コメントの確認</p>
+
+<h2><$mt:BlogName encode_html="1"$>: コメントの確認</h2>
+
+
+<mt:Ignore><!-- Comment Preview --></mt:Ignore>
+<div class="comment" id="comment-<$mt:CommentID$>">
+
+
+<div class="asset-meta">
+<span class="byline">
+<$mt:CommentAuthorIdentity$>
+<mt:IfCommentParent>
+<span class="vcard author"><$mt:CommentAuthorLink$></span>から<a href="<mt:CommentParent><$mt:CommentLink$></mt:CommentParent>"><mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent></a>への返信
+<mt:Else>
+<span class="vcard author"><$mt:CommentAuthorLink$></span>
+</mt:IfCommentParent>
+| <a href="<$mt:CommentLink$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></abbr></a>
+</span>
+</div>
+
+<div class="comment-content">
+<$mt:CommentBody$>
+</div>
+
+</div>
+
+
+<mt:Ignore><!-- Comment Form --></mt:Ignore>
+<div class="comments-open" id="comments-open">
+<h3 class="comments-open-header">コメントする</h3>
+<div class="comments-open-content">
+<div id="comment-greeting"></div>
+<form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+<input type="hidden" name="static" value="1" />
+<input type="hidden" name="armor" value="1" />
+<input type="hidden" name="preview" value="" />
+<input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
+<input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
+<mt:IfCommentParent>
+<input type="hidden" name="parent_id" value="<$mt:CommentParentID$>" id="comment-parent-id">
+</mt:IfCommentParent>
+
+<div id="comments-open-data">
+
+<div id="comment-form-name">
+<label for="comment-author">名前</label>
+<input id="comment-author" name="author" size="30" value="<$mt:CommentAuthor encode_html="1"$>" onfocus="mtShowCaptcha()" />
+</div>
+
+<div id="comment-form-email">
+<label for="comment-email">電子メール</label>
+<input id="comment-email" name="email" size="30" value="<$mt:CommentEmail encode_html="1"$>" onfocus="mtShowCaptcha()" />
+</div>
+
+<div id="comment-form-url">
+<label for="comment-url">URL</label>
+<input id="comment-url" name="url" size="30" value="<$mt:CommentURL encode_html="1"$>" onfocus="mtShowCaptcha()" />
+</div>
+
+</div>
+
+<mt:IfCommentParent>
+<div id="comment-form-reply">
+<input type="checkbox" id="comment-reply" name="comment_reply" value="<$mt:CommentParentID$>" checked="checked" onclick="mtSetCommentParentID()" />
+<label for="comment-reply" id="comment-reply-label"><mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent>からのコメントに返信</label>
+</div>
+</mt:IfCommentParent>
+
+<div id="comments-open-text">
+<label for="comment-text">コメント <mt:IfAllowCommentHTML>(スタイル用のHTMLタグを使えます)</mt:IfAllowCommentHTML></label>
+<textarea id="comment-text" name="text" rows="15" cols="50" onfocus="mtShowCaptcha()"><$mt:CommentBody autolink="0" sanitize="0" convert_breaks="0" encode_html="1"$></textarea>
+</div>
+
+<div id="comments-open-captcha"></div>
+<div id="comments-open-footer">
+<input type="submit" accesskey="v" name="preview_button" id="comment-preview" value="確認" onclick="this.form.preview.value='1';" />
+<input type="submit" accesskey="s" name="post" id="comment-submit" value="投稿" />
+<input type="button" name="cancel" id="comment-cancel" value="キャンセル" onclick="window.location='<$mt:EntryPermalink$>'" />
+</div>
+</form>
+
+</div>
+</div>
+
+
+</div>
+</div>
+<!-- / main -->
+
+
+<$MTInclude module="サイドバー"$>
+
+</div>
+<!-- /content  -->
+
+
+<$mt:include module="バナーフッター"$>
+
+</body>
+</html>

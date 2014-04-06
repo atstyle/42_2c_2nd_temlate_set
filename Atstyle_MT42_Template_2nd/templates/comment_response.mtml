@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="<$MTPublishCharset$>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard" xml:lang="<$MTBlogLanguage$>" lang="<$MTBlogLanguage$>">
+
+<head>
+<MTIf name="comment_confirmation">
+<mt:ignore><!-- Success message when comment has been submitted --></mt:ignore>
+<MTSetVar name="page_title" value="確認">
+<MTSetVar name="message" value="<p>コメントを投稿しました。</p>">
+<MTElse name="comment_pending">
+<mt:ignore><!-- Pending message when comment is being held for review --></mt:ignore>
+<MTSetVar name="page_title" value="コメントありがとうございます。">
+<MTSetVar name="message" value="<p>コメントは現在承認されるまで公開を保留されています。</p>">
+<MTElse name="comment_error">
+<mt:ignore><!-- Error message when comment submission fails --></mt:ignore>
+<MTSetVar name="page_title" value="コメント投稿エラー">
+<MTSetVarBlock name="message"><p>コメントを投稿できませんでした。エラー: <$MTErrorMessage$></p></MTSetVarBlock>
+</MTIf>
+<$mt:include module="HTMLヘッダー"$>
+<title><$MTBlogName encode_html="1"$>: <$MTVar name="page_title"$></title>
+</head>
+
+<body>
+
+<$mt:include module="バナーヘッダー"$>
+<!-- begin content -->
+<div id="content">
+
+<!-- begin main -->
+<div id="main">
+<div class="inner">
+
+<p><a href="<$MTBlogURL$>" title="ホーム">ホーム</a>
+&gt;
+<$MTVar name="page_title"$></p>
+
+<h2><$MTVar name="page_title"$></h2>
+<$MTVar name="message"$>
+<p><a href="<$MTEntryLink$>">元の記事</a>に戻る</p>
+
+</div>
+</div>
+<!-- / main -->
+
+
+<$MTInclude module="サイドバー"$>
+
+</div>
+<!-- /content  -->
+
+
+<$mt:include module="バナーフッター"$>
+
+</body>
+</html>

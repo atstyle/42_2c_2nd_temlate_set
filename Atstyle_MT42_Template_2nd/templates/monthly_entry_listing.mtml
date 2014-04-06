@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="<$MTPublishCharset$>"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard" xml:lang="<$MTBlogLanguage$>" lang="<$MTBlogLanguage$>">
+
+<head>
+<$mt:include module="HTMLヘッダー"$>
+<title><$MTBlogName encode_html="1"$>: <$MTArchiveTitle$>アーカイブ</title>
+<mt:ignore>
+<!-- Include Next and Previous links if publishing a date-based archive -->
+</mt:ignore>
+<MTIf name="datebased_archive">
+<MTArchivePrevious><link rel="prev" href="<$MTArchiveLink$>" title="<$MTArchiveTitle encode_html="1"$>" /></MTArchivePrevious>
+<MTArchiveNext><link rel="next" href="<$MTArchiveLink$>" title="<$MTArchiveTitle encode_html="1"$>" /></MTArchiveNext>
+</MTIf>
+
+</head>
+<body>
+
+<$mt:include module="バナーヘッダー"$>
+
+
+<!-- begin content -->
+<div id="content">
+
+<!-- begin main -->
+<div id="main">
+<div class="inner">
+
+<p><a href="<$MTBlogURL$>" title="ホーム">ホーム</a>
+&gt;
+<$MTArchiveTitle$></p>
+
+<MTEntries lastn="0">
+<$mt:include module="ブログ記事の概要"$>
+</MTEntries>
+
+</div>
+</div>
+<!-- / main -->
+
+
+<$MTInclude module="サイドバー"$>
+
+</div>
+<!-- /content  -->
+
+
+<$mt:include module="バナーフッター"$>
+
+</body>
+</html>
+
